@@ -116,8 +116,8 @@ body {
   .hero-section > p{
     font-family: 'Playfair Display';
     font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
+    font-size: .8rem;
+    line-height: .8rem;
     color: #000000;
     grid-column: 1;
     grid-row: 2;
@@ -137,6 +137,77 @@ body {
     justify-self: center;
   }
                                  /* PROJECTS SECTION */
+  .projects-title{
+    margin: 1rem auto;
+    display: block;
+    width: 100px;
+  }
+  .projects-section{
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    border-radius: .75rem;
+    background: #4071C0;
+    margin: 2rem auto;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #000 ;
+  }
+  .projects-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 500px;
+  }
 
+  .panel{
+    width: 340px;
+    border-radius: 50px;
+    color: #fff;
+    margin: .5rem auto;
+    cursor: pointer;
+    position: relative;
+    transition: flex 1s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+  }
+  .panel > img{
+    width: 400px;
+  }
+  .panel h3{
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  .netlify {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  .github{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  .panel.active{
+    flex: 5;
+  }
+  .panel.active h3, 
+  .panel.active .github,
+  .panel.active .netlify {
+    transition: opacity 0.5s ease-in 0.5s;
+    opacity: 1;
+  }
 }
 
