@@ -211,3 +211,8 @@ body {
   }
 }
 
+@media screen and (max-width: 370px) {
+  .panel{
+    width: 280px;
+  }
+}
