@@ -138,9 +138,11 @@ body {
   }
                                  /* PROJECTS SECTION */
   .projects-title{
-    margin: 1rem auto;
-    display: block;
-    width: 100px;
+    margin: 1rem auto .5rem;
+  }
+  .projects-subtitle{
+    margin: 0 auto .5rem;
+    font-size: .75rem;
   }
   .projects-section{
     display: flex;
@@ -209,6 +211,59 @@ body {
     transition: opacity 0.5s ease-in 0.5s;
     opacity: 1;
   }
+
+                                   /* PAST WORK SECTION */
+  .past-work-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem 1fr 1fr 1fr 4rem;
+    grid-gap: 2rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+  .past-work--title{
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+  }
+  .past-work--body{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    background: #375FA3;
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 0 .5rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+
+  }
+  .past-work--body.bottom-text{
+    background: #375FA3;
+    color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    grid-column: 1 / -1;
+    grid-row: 5;
+    justify-self: center;
+    align-self: center;
+  }
+  .past-work--image{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: .75rem;
+  }
+
 }
 
 @media screen and (max-width: 370px) {

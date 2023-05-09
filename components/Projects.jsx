@@ -30,6 +30,7 @@ export default function Projects (){
         <>
             <div className="projects-section">
             <h1 className="projects-title">Projects</h1>
+            <h3 className="projects-subtitle">Click on the photo for more info</h3>
                 <div className="projects-container">
                 {projectsData.map((project, i) => 
                     <div 
