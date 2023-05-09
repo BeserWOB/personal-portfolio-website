@@ -55,7 +55,7 @@ body {
   .menu.show {
     display: block;
     position: absolute;
-    top: 6rem;
+    top: 3rem;
     right: 0;
     width: 80%;
     text-align: center;
@@ -216,10 +216,10 @@ body {
   .past-work-section{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4rem 1fr 1fr 1fr 4rem;
+    grid-template-rows: 4rem 10rem 10rem 10rem 4rem;
     grid-gap: 2rem;
     margin: 1rem auto;
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
   .past-work--title{
     grid-column: 1 / -1;
@@ -240,10 +240,9 @@ body {
     border-radius: 12px;
     padding: 0 .5rem;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-
+    
   }
   .past-work--body.bottom-text{
-    background: #375FA3;
     color: #FFFFFF;
     border-radius: 12px;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
@@ -255,15 +254,43 @@ body {
     grid-row: 5;
     justify-self: center;
     align-self: center;
+    margin: 2rem auto;
   }
   .past-work--image{
-    width: 10rem;
-    height: 10rem;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     overflow: hidden;
     border-radius: .75rem;
   }
+                              /*  PAST LIFE SECTION  */
+  .life{
+    background-color: #4071C0;
+    border-radius: .75rem;
+    color: #FFFFFF;
+  }
+                                /*  FOOTER SECTION  */
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-icons > img{
+    width: 2rem;
+  }
+  .footer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer > p{
+    font-family: 'Playfair Display';
+    font-size: .7rem;
+    font-weight: 500;
+    color: #4071C0;
 
+  }
 }
 
 @media screen and (max-width: 370px) {
