@@ -103,6 +103,7 @@ body {
   .hero-section{
     display: grid;
     grid-template: 5rem / 1fr 1fr;
+    margin: 0 1rem;
   }
   .hero-section > h1{
     font-family: 'Playfair Display';
@@ -110,7 +111,7 @@ body {
     font-size: 20px;
     line-height: 27px;
     text-align: center;
-    margin: 2rem 1rem;
+    margin: 2rem 0;
     grid-column: 1 / -1;
   }
   .hero-section > p{
@@ -124,7 +125,6 @@ body {
     z-index: -1;
     align-self: center;
     justify-self: center;
-    margin-left: 1rem;
   }
   .hero-section > img{
     width: 150px;
@@ -134,7 +134,7 @@ body {
     grid-row: 2;
     z-index: -1;
     align-self: center;
-    justify-self: center;
+    justify-self: right;
   }
                                  /* PROJECTS SECTION */
   .projects-title{
@@ -145,12 +145,12 @@ body {
   .projects-section{
     display: flex;
     flex-direction: column;
-    width: 95vw;
     border-radius: .75rem;
     background: #4071C0;
-    margin: 2rem auto;
+    margin: 2rem 1rem;
     color: #FFFFFF;
     text-shadow: 0 0 5px #000 ;
+
   }
   .projects-container{
     display: flex;
