@@ -7,8 +7,6 @@ export default function Projects (){
 
     useEffect(()=>{
         const panels = document.querySelectorAll(".panel");
-       
-        panels[0].classList.add('active');
         
         panels.forEach((panel) =>{
             panel.addEventListener('click', () =>{
@@ -30,22 +28,22 @@ export default function Projects (){
         <>
             <div className="projects-section">
             <h1 className="projects-title">Projects</h1>
-            <h3 className="projects-subtitle">Click on the photo for more info</h3>
                 <div className="projects-container">
-                {projectsData.map((project, i) => 
-                    <div 
-                        className="panel"
-                        key={i}    
-                        >
-                        <img 
-                            src={project.url} 
-                            alt="project screenshot" 
-                        />
-                        <h3>{project.title}</h3>
-                        <p className="github">{project.github}</p>
-                        <p className="netlify">{project.netlify}</p>
+                {projectsData.map((project, i) => (
+                    <div
+                      className="panel"
+                      style={{ 
+                        backgroundImage: `url(${project.url})` 
+                    }}
+                      key={i}
+                    >
+                      <h3>{project.title}</h3>
+                      <p>{project.description}</p>
+                      <a className="link github" href="#">GitHub Repo</a>
+                      <a className="link netlify" href="#">Try it out!</a>
                     </div>
-                )}
+                ))}
+
             </div>
         </div>
         </>
