@@ -1,28 +1,19 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import projectsData from "../projectsData";
 
 
 
 export default function Projects (){
+    const [active, setActive] = useState(null);
 
-    useEffect(()=>{
-        const panels = document.querySelectorAll(".panel");
-        
-        panels.forEach((panel) =>{
-            panel.addEventListener('click', () =>{
-                removeActiveClass();
-                panel.classList.add('active')
-            })
-        })
-        const removeActiveClass = () => {
-            panels.forEach(panel => {
-                panel.classList.remove('active');
-            })
-        }   
-    },[])    
-
-
-
+    function toggleActiveClass(index) {
+        if (active === index) {
+          setActive(null);
+        } else {
+          setActive(index);
+        }
+      }
+    
 
     return (
         <>
@@ -31,15 +22,16 @@ export default function Projects (){
                 <div className="projects-container">
                 {projectsData.map((project, i) => (
                     <div
-                      className="panel"
+                    className={`panel ${active === i ? 'active' : ''}`}
                       style={{ 
                         backgroundImage: `url(${project.url})` 
                     }}
                       key={i}
+                      onClick={() => toggleActiveClass(i)}
                     >
                       <h3>{project.title}</h3>
                       <p>{project.description}</p>
-                      <a className="link github" href="#">GitHub Repo</a>
+                      <a className="link github" href="#">GitHub Repo </a>
                       <a className="link netlify" href="#">Try it out!</a>
                     </div>
                 ))}
@@ -49,3 +41,4 @@ export default function Projects (){
         </>
     )
 }
+
