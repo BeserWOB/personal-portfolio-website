@@ -1,7 +1,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  background: #190a71 url('./images/projectsBackground.jpeg') no-repeat fixed center;
+  background: #190a71 url('./images/background.jpeg') no-repeat fixed center;
   background-size: cover;
   background-position: top center;
   background-origin: border-box;
