@@ -261,7 +261,7 @@ body {
     padding: 1rem;
     border: #fff solid 1px;
     color: #fff;
-    background-image: url('./images/breakLine.jpeg');
+    background-image: url('./images/skills-background.jpeg');
     background-size: cover;
     background-position: top center;
   }
@@ -344,7 +344,7 @@ body {
   flex-direction: column;
   align-items: left;
   gap: 1rem;
-  background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), url('/images/novi-sad-1.jpeg');
+  background-image: linear-gradient(rgba(0,0,0, .25), rgba(0,0,0, .25)), url('/images/novi-sad.jpeg');
   background-size: cover;
   background-position: center center;
   text-shadow: 0 0 5px rgba(0, 0, 0, .7);
