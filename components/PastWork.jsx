@@ -11,7 +11,7 @@ export default function PastWork (){
             <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src="./images/past-work-1.jpeg" alt="photo of past work as a musician"/>
+                    <img src="../images/past-work-1.jpeg" alt="photo of past work as a musician"/>
                   </div>
                   <div className="flip-card-back">
                     <p> As a web developer with a passion for creativity, I have always been drawn to the intersection of technology and art. 
@@ -23,7 +23,7 @@ export default function PastWork (){
             <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src="./images/past-work-2.jpeg" alt="photo of past work as a musician"/>
+                    <img src="../images/past-work-2.jpeg" alt="photo of past work as a musician"/>
                   </div>
                   <div className="flip-card-back">
                     <p> My love for music has given me a unique perspective in my work as a web developer. 
@@ -36,7 +36,7 @@ export default function PastWork (){
             <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src="./images/past-work-3.jpeg" alt="photo of past work as a musician"/>
+                    <img src="../images/past-work-3.jpeg" alt="photo of past work as a musician"/>
                   </div>
                   <div className="flip-card-back">
                     <p> Whether I'm building a sleek and modern e-commerce platform or a vibrant and interactive web application, 
@@ -48,7 +48,7 @@ export default function PastWork (){
             <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src="./images/past-work-4.jpeg" alt="photo of past work as a musician"/>
+                    <img src="../images/past-work-4.jpeg" alt="photo of past work as a musician"/>
                   </div>
                   <div className="flip-card-back">
                     <p> Take a look around my website to learn more about my work and interests, 

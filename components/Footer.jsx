@@ -12,6 +12,11 @@ export default function Footer (){
                 <img src="./images/footer/youtube.png" alt="youtube-logo" />
             </div>
                 <p>Made by Ivan Beserminji with React in Wolfsburg 2023.</p>
+
+
+
+
+        
         </footer>
     )
 }
