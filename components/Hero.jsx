@@ -1,4 +1,6 @@
 import React from "react";
+import profileImage from "../images/ivan-profile-pic.jpeg";
+
 
 
 export default function Hero (){
@@ -8,7 +10,8 @@ export default function Hero (){
             <p>Passionate web developer eager to learn and contribute. 
                 Ready to build exceptional online experiences with a focus on blending aesthetics and functionality. 
                 Let's make magic happen in the ever-evolving world of web development.</p>
-            <img src="./images/ivan-profile-pic.jpeg" alt="Ivan profile picture" />
+            <img src={profileImage} alt="Profile picture of Ivan" />
+
         </div>
     )
 }
