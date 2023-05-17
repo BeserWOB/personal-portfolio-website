@@ -6,7 +6,9 @@ import Skills from "../components/Skills"
 import PastWork from "../components/PastWork"
 import PastLife from "../components/PastLife"
 import Footer from "../components/Footer"
-import "./index.css"
+import background from "../images/background.jpeg";
+import skillsBackground from "../images/skills-background.jpeg";
+
 
 
 
