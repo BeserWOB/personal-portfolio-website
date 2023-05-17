@@ -6,6 +6,9 @@ import Skills from "../components/Skills"
 import PastWork from "../components/PastWork"
 import PastLife from "../components/PastLife"
 import Footer from "../components/Footer"
+import "./index.css"
+
+
 
 
 
