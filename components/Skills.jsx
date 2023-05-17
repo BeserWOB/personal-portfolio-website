@@ -1,4 +1,6 @@
 import React from "react";
+import skillsBackground from "../images/skills-background.jpeg"
+
 
 
 export default function Skills (){

@@ -1,3 +1,11 @@
+/* import panelBackground1 from "../images/project-image-1.jpeg"
+import panelBackground2 from "../images/project-image-2.jpeg"
+import panelBackground3 from "../images/project-image-3.jpeg"
+import panelBackground4 from "../images/project-image-4.jpeg"
+import panelBackground5 from "../images/project-image-5.jpeg"
+import panelBackground6 from "../images/project-image-6.jpeg"
+ */
+
 export default [
     {    
         url: "../images/project-image-1.jpeg",
