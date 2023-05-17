@@ -1,7 +1,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  background: #190a71 url('./images/background.jpeg') no-repeat fixed center;
+  background: #190a71 url('/images/background.jpeg') no-repeat fixed center;
   background-size: cover;
   background-position: top center;
   background-origin: border-box;
@@ -279,7 +279,7 @@ body {
     padding: 1rem;
     border: #fff solid 1px;
     color: #fff;
-    background-image: url('./images/skills-background.jpeg');
+    background-image: url('/images/skills-background.jpeg');
     background-size: cover;
     background-position: top center;
   }
