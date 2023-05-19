@@ -26,7 +26,7 @@ export default function Projects (){
                     <div
                     className={`panel ${active === i ? 'active' : ''}`}
                       style={{ 
-                        backgroundImage: `url(${project.url})` 
+                        backgroundImage:`url(${project.url})` 
                     }}
                       key={i}
                       onClick={() => toggleActiveClass(i)}
