@@ -3,9 +3,10 @@ import profileImage from "../images/ivan-profile-pic.jpeg";
 
 
 
-export default function Hero (){
+const Hero = React.forwardRef((props, ref) => {
+
     return (
-        <div className="hero-section">
+        <div className="hero-section" ref={ref} >
             <h1>Welcome to my <span>portfolio</span>!</h1>
             <p>Passionate web developer eager to learn and contribute. 
                 Ready to build exceptional online experiences with a focus on blending aesthetics and functionality. 
@@ -14,4 +15,6 @@ export default function Hero (){
 
         </div>
     )
-}
+})
+
+  export  { Hero };

@@ -5,7 +5,7 @@ import projectsData from "../projectsData";
 
 
 
-export default function Projects (){
+const Projects = React.forwardRef((props, ref) => {
     const [active, setActive] = useState(null);
 
     function toggleActiveClass(index) {
@@ -19,7 +19,7 @@ export default function Projects (){
 
     return (
         <>
-            <div className="projects-section">
+            <div className="projects-section" ref={ref} id="projects">
             <h1 className="projects-title">Projects</h1>
                 <div className="projects-container">
                 {projectsData.map((project, i) => (
@@ -42,5 +42,6 @@ export default function Projects (){
         </div>
         </>
     )
-}
+})
 
+export { Projects }

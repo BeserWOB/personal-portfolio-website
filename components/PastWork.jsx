@@ -5,9 +5,9 @@ import pastWork3 from "../images/past-work-3.jpeg"
 import pastWork4 from "../images/past-work-4.jpeg"
 
 
-export default function PastWork (){
+const PastWork = React.forwardRef((props, ref) => {
     return (
-        <>
+        <main ref={ref} id="past-work">
         
             <h1 className="past-work--title">Past Work</h1>
         <div className="past-work-section">
@@ -62,6 +62,8 @@ export default function PastWork (){
                 </div>
             </div>
         </div>
-        </>
+        </main>
     )
-}
+})
+
+export { PastWork }

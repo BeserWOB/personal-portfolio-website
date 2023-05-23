@@ -3,9 +3,9 @@ import skillsBackground from "../images/skills-background.jpeg"
 
 
 
-export default function Skills (){
+const Skills =  React.forwardRef((props, ref) => {
     return (
-          <div className="about__content-skills">
+          <div className="about__content-skills" ref={ref}>
             <h3 className="about__content-title">My Skills</h3>
             <div className="skills">
               <div className="skills__skill">HTML</div>
@@ -16,7 +16,11 @@ export default function Skills (){
               <div className="skills__skill">Figma</div>
               <div className="skills__skill">Canva</div>
               <div className="skills__skill">Responsive Design</div>
+              <div className="skills__skill">Three.js</div>
+              <div className="skills__skill">GSAP</div>
             </div>
           </div>
     )
-}
+})
+
+export { Skills };

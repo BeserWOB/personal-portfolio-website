@@ -1,9 +1,9 @@
 import React from "react";
 
 
-export default function PastLife (){
+const PastLife = React.forwardRef((props, ref) => {
     return (
-        <div className="past-life-section">
+        <div className="past-life-section" ref={ref} id="past-life">
             <h1 className="past-life--title">Past Life</h1>
             <div className="past-life--body">
                 <p>I spent 28 years living in Novi Sad, Serbia, where I established my family and built a life for myself. It was my home, and I knew every street, every café, and every park like the back of my hand.</p>
@@ -22,4 +22,6 @@ export default function PastLife (){
             </div>
         </div>
     )
-}
+})
+
+export { PastLife }
