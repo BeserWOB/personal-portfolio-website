@@ -202,7 +202,7 @@ body {
     border-radius: 5px;
     margin: .5rem 0;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     transition: all .6s ease-in;
     cursor: pointer;
   }
