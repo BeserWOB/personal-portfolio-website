@@ -1,6 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -11,7 +9,6 @@ import PastLife from '../components/PastLife';
 import Footer from '../components/Footer';
 
 export default function App() {
-
   return (
     <main>
       <Header />

@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import { Link } from 'react-scroll';
 
 
 export default function Header (){
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const nameRef = useRef(null);
+  const navRef = useRef(null);
+  const headerTl = gsap.timeline({defaults: {
+      duration: .6, 
+      ease: "power4.inOut", 
+}});
+  
+useEffect(() => {
+    headerTl
+      .fromTo(nameRef.current, { x: "-500%" ,}, { x: "0%" ,})
+      .fromTo(navRef.current, { x: "120%" }, {x: "0%" , delay: 1, duration: 1.5});
+},[]);
     
   return (
     <header id='header'>
-      <h3>Ivan Beserminji</h3>
+      <h3 ref={nameRef}>Ivan Beserminji</h3>
 
       <div
         className={!menuOpen ? 'hamburger-menu' : 'hamburger-menu open'}
@@ -18,8 +32,8 @@ export default function Header (){
         <div></div>
       </div>
 
-      <div className={`menu ${menuOpen ? 'show' : ''}`}>
-        <Link to="header" smooth={true} duration={1000}>
+      <div ref={navRef} className={`menu ${menuOpen ? 'show' : ''}`}>
+        <Link to="hero" smooth={true} duration={1000}>
             HOME
         </Link>
         <Link to="projects" smooth={true} duration={1000}>

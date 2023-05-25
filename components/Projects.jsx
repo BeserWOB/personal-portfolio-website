@@ -26,16 +26,16 @@ export default function Projects() {
         gsap.fromTo(
           panel,
           {
-            x: "500%",
+            x: "200%",
           },
           {
-            delay: index * 0.1,
+            delay: index * 0.2,
             x: "0%",
             duration: 1,
             ease: "bounce.out",
             scrollTrigger: {
               trigger: panel,
-              start: "top 80%", // Adjust the start position based on your needs
+              start: "top 100%",
               toggleActions: "play none none reset",
             },
           }
@@ -68,22 +68,24 @@ export default function Projects() {
             >
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <a
+
+              {project.github && (<a
                 className="link github"
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 GitHub Repo
-              </a>
-              <a
+              </a>)}
+
+              {project.netlify && (<a
                 className="link netlify"
                 href={project.netlify}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Try it out!
-              </a>
+              </a>)}
             </div>
           ))}
         </div>

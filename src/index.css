@@ -10,16 +10,23 @@ body {
 
 }
 
+bold{
+  font-family: 'Londrina Outline', cursive;
+  font-size: 2rem;
+  font-style: italic;
+
+}
+
 
 
                                   /* HEADER SECTION */
   header{
     position: relative;
-    z-index: 1;
+    width: 100%;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     margin: 0;
   }
   header > h3{
@@ -105,14 +112,14 @@ body {
       to left,
       #fff 10%,
       #d907ac 40%,
-      #190a71 70%,
+      #fff 70%,
       #32F8FF 80%
   );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 500% auto;
-    animation: textShine 3s ease-in-out infinite alternate;
+    animation: textShine 3s ease-in-out 2 alternate;
   }
                                   /* CLOSING OF HAMBURGER MENU */
   .hamburger-menu.open div:nth-child(1) {
@@ -143,13 +150,12 @@ body {
       to left,
       #d907ac 20%,
       #fff 30%,
-      #190a71 70%,
+      #0013FF 70%,
       #32F8FF 80%
   );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
     background-size: 500% auto;
     animation: textShine 6s ease-in-out infinite alternate;
     text-decoration: underline;
@@ -174,7 +180,7 @@ body {
     margin: 2rem 1rem;
     border-radius: 1rem;
     background: linear-gradient(to top, rgba(217, 7, 172, .8), rgba(25, 10, 113, .8)); 
-
+    overflow: hidden;
     
   }
     .projects-container{
@@ -188,8 +194,8 @@ body {
     }
   .projects-title{
     font-family: 'Montserrat', sans-serif;
-    margin: 1rem auto .5rem;
     font-size: 2.5rem;
+    margin: 1rem auto .5rem;
   }
 
   .panel{
@@ -202,8 +208,8 @@ body {
     border-radius: 5px;
     margin: .5rem 0;
     background-size: cover;
-    background-position: top center;
-    transition: all .6s ease-in;
+    background-position: left center;
+    transition: all .4s ease-in-out;
     cursor: pointer;
   }
   .panel:hover{
@@ -212,7 +218,7 @@ body {
     box-shadow: 0 0 25px rgba(217, 7, 172, .75);
   }
   .panel > h3{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -221,14 +227,16 @@ body {
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   }
   .panel > p{
-    font-size: .8rem;
     position: absolute;
-    max-width: 80%;
-    top: 20%;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    max-width: 70%;
+    top: 25%;
     left: 5%;
     margin: 0;
     visibility: hidden;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
   }
   .netlify {
     font-size: 1rem;
@@ -240,6 +248,16 @@ body {
   }
   .panel.active{
     flex: 12;
+  }
+  .panel.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(3px);
+    pointer-events: none;
   }
   .panel.active h3, 
   .panel.active p, 
@@ -303,13 +321,13 @@ body {
     gap: 1rem;
   }
   .skills__skill{
+    font-size: 1.3rem;
     display: inline-block;
-    padding: 1rem;
+    padding: 1.2rem 2rem;
     border: #fff solid 1px;
     color: #fff;
-    background-image: url('/images/skills-background.jpeg');
-    background-size: cover;
-    background-position: top center;
+    background-color: transparent;
+    border-radius: .5rem;
   }
   .skills__skill:hover{
     -webkit-animation: vibrate-1 0.3s linear 0.5s both;
