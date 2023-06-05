@@ -32,7 +32,7 @@ useEffect(() => {
         <div></div>
       </div>
 
-      <div ref={navRef} className={`menu ${menuOpen ? 'show' : ''}`}>
+      <div ref={navRef} className={`menu ${menuOpen ? 'show' : ''}`} id='menu'>
         <Link to="hero" smooth={true} duration={1000}>
             HOME
         </Link>
