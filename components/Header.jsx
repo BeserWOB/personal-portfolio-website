@@ -16,7 +16,7 @@ export default function Header (){
 useEffect(() => {
     headerTl
       .fromTo(nameRef.current, { x: "-500%" ,}, { x: "0%" ,})
-      .fromTo(navRef.current, { x: "120%" }, {x: "0%" , delay: 1, duration: 1.5});
+      .fromTo(navRef.current, { x: "220%" }, {x: "0%" , delay: 1, duration: 1.5});
 },[]);
     
   return (

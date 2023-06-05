@@ -37,7 +37,7 @@ export default [
     {    
         url: panelBackground5,
         title: "More is coming",
-        description: "The future holds boundless possibilities, and I am committed to bringing even more exciting projects to life. Stay tuned for a wave of innovation and creativity as I embark on a journey to create and deliver captivating experiences that will delight and inspire. Together, let's explore new horizons and shape a future filled with remarkable projects that leave a lasting impact. The best is yet to come!",
+        description: "The future holds boundless possibilities, and I am committed to bringing even more exciting projects to life. Stay tuned for a wave of innovation and creativity as I create and deliver captivating experiences that will delight and inspire. Together, let's explore new horizons and shape a future filled with projects that leave a lasting impact. The best is yet to come!",
     },
 
 ]

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import facebook from "../images/footer/facebook.png";
 import instagram from "../images/footer/instagram.png";
 import github from "../images/footer/github.png";

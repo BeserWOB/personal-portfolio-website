@@ -16,7 +16,6 @@ export default function Skills (){
               <div className="skills__skill">Figma</div>
               <div className="skills__skill">Canva</div>
               <div className="skills__skill">Responsive Design</div>
-              <div className="skills__skill">Three.js</div>
               <div className="skills__skill">GSAP</div>
             </div>
           </div>
