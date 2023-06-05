@@ -5,7 +5,9 @@ import { Link } from 'react-scroll';
 
 export default function Header (){
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [darkModeOn, setDarkModeOn] = useState(true)
+  
+  const headerRef = useRef(null);
   const nameRef = useRef(null);
   const navRef = useRef(null);
   const headerTl = gsap.timeline({defaults: {
@@ -22,9 +24,25 @@ useEffect(() => {
 function closeTheMenu () {
   setMenuOpen(false);
 }
+
+function toggleTheme (){
+  setDarkModeOn(!darkModeOn)
+  document.body.classList = darkModeOn ? "dark-mode" : "light-mode"
+}
+
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){
+      headerRef.current.classList.add="header-scrolled"
+    } else if(window.scrollY < 50){
+      headerRef.current.classList.remove="header-scrolled"
+    }
+  })
+
     
   return (
-    <header id='header'>
+    <header id='header' className='header' ref={headerRef}>
+
       <h3 ref={nameRef}>Ivan Beserminji</h3>
 
       <div
@@ -69,6 +87,9 @@ function closeTheMenu () {
           >
             PAST LIFE
         </Link>
+        <button onClick={toggleTheme}>
+          toggle
+        </button>
 
       </div>
     </header>
