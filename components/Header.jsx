@@ -18,6 +18,10 @@ useEffect(() => {
       .fromTo(nameRef.current, { x: "-500%" ,}, { x: "0%" ,})
       .fromTo(navRef.current, { x: "220%" }, {x: "0%" , delay: 1, duration: 1.5});
 },[]);
+
+function closeTheMenu () {
+  setMenuOpen(false);
+}
     
   return (
     <header id='header'>
@@ -33,16 +37,36 @@ useEffect(() => {
       </div>
 
       <div ref={navRef} className={`menu ${menuOpen ? 'show' : ''}`} id='menu'>
-        <Link to="hero" smooth={true} duration={1000}>
+        <Link 
+          to="hero" 
+          smooth={true} 
+          duration={1000}
+          onClick={closeTheMenu}
+          >
             HOME
         </Link>
-        <Link to="projects" smooth={true} duration={1000}>
+        <Link 
+          to="projects" 
+          smooth={true} 
+          duration={1000}
+          onClick={closeTheMenu}
+          >
             PROJECTS
         </Link>
-        <Link to="past-work" smooth={true} duration={1000}>
+        <Link 
+          to="past-work" 
+          smooth={true} 
+          duration={1000}
+          onClick={closeTheMenu}
+          >
             PAST WORK
         </Link>
-        <Link to="past-life" smooth={true} duration={1000}>
+        <Link 
+          to="past-life" 
+          smooth={true} 
+          duration={1000}
+          onClick={closeTheMenu}
+          >
             PAST LIFE
         </Link>
 

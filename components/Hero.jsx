@@ -18,7 +18,7 @@ useEffect(() => {
       heroTl
         .fromTo(heroImageRef.current, { opacity: 0,  scale: 0}, { opacity: 1, scale: 1 })
         .fromTo(heroTextRef.current, { opacity: 0 , scale: 0}, { opacity: 1 , scale: 1})
-        .fromTo(heroTitleRef.current, { opacity: 0 , x: "100%"}, { opacity: 1 , x: "0", ease: "elastic.out(1, 0.3)",});
+        .fromTo(heroTitleRef.current, { opacity: 0 , x: "200%"}, { opacity: 1 , x: "0", ease: "elastic.out(1, 0.3)",});
   },[]);
     
     return (
