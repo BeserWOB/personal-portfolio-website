@@ -14,10 +14,10 @@ export default function Header (){
       duration: .6, 
       ease: "power4.inOut", 
 }});
-  
+//Timeline
 useEffect(() => {
     headerTl
-      .fromTo(nameRef.current, { x: "-500%" ,}, { x: "0%" ,})
+      .fromTo(headerRef.current, { y: "-300%" ,}, { y: "0%" ,})
       .fromTo(navRef.current, { x: "220%" }, {x: "0%" , delay: 1, duration: 1.5});
 },[]);
 
@@ -30,14 +30,22 @@ function toggleTheme (){
   document.body.classList = darkModeOn ? "dark-mode" : "light-mode"
 }
 
-
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 50){
-      headerRef.current.classList.add="header-scrolled"
-    } else if(window.scrollY < 50){
-      headerRef.current.classList.remove="header-scrolled"
+//handleScroll
+useEffect(() => {
+  function handleScroll () {
+    if (window.scrollY > 50) {
+      headerRef.current.className = 'header header-scrolled';
+    } else if (window.scrollY < 50) {
+      headerRef.current.className = 'header';
     }
-  })
+     
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
 
     
   return (
@@ -55,8 +63,10 @@ function toggleTheme (){
       </div>
 
       <div ref={navRef} className={`menu ${menuOpen ? 'show' : ''}`} id='menu'>
+      <h3 className='menu-name'>Ivan Beserminji</h3>
         <Link 
           to="hero" 
+          offset={-80}
           smooth={true} 
           duration={1000}
           onClick={closeTheMenu}
@@ -65,6 +75,7 @@ function toggleTheme (){
         </Link>
         <Link 
           to="projects" 
+          offset={-100}
           smooth={true} 
           duration={1000}
           onClick={closeTheMenu}
@@ -73,6 +84,7 @@ function toggleTheme (){
         </Link>
         <Link 
           to="past-work" 
+          offset={-100}
           smooth={true} 
           duration={1000}
           onClick={closeTheMenu}
@@ -81,13 +93,17 @@ function toggleTheme (){
         </Link>
         <Link 
           to="past-life" 
+          offset={-100}
           smooth={true} 
           duration={1000}
           onClick={closeTheMenu}
           >
             PAST LIFE
         </Link>
-        <button onClick={toggleTheme}>
+        <button 
+          className='toggle-darkmode-btn'
+          onClick={toggleTheme}
+        >
           toggle
         </button>
 
